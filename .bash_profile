@@ -31,17 +31,10 @@ export PS1="\[\e[0;36m\]\t \[\e[0;32m\]\h \[\e[0;33m\]\w \[\e[0;34m\](\[\e[0;34m
 
 export GIT_HOME=/usr/local/Cellar/git/2.18.0
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk-12.0.1.jdk/Contents/Home
-export M2_HOME=~/Dev/apps/apache-maven-3.5.3
-export MAVEN_HOME=~/Dev/apps/apache-maven-3.5.3
-export JMETER_HOME=~/Dev/apps/apache-jmeter-4.0
 export CLASSPATH=.:$CLASSPATH
-export WINEARCH=win32
-export MW_HOME=~/Dev/apps/wls1036_dev
-export PATH_TO_FX=~/Dev/apps/javafx-sdk-12.0.1/lib
 
 export PATH="$PATH:/usr/local/bin/"
-export PATH="$PATH:/usr/local/opt/libxml2/bin"
-export PATH="~/.local/bin:$JAVA_HOME/bin:$MAVEN_HOME/bin:$JMETER_HOME/bin:$GIT_HOME/bin:$PATH"
+export PATH="~/.local/bin:$JAVA_HOME/bin:$GIT_HOME/bin:$PATH"
 
 #   Set Default Editor (change 'Nano' to the editor of your choice)
 #   ------------------------------------------------------------
@@ -92,8 +85,6 @@ mcd () { mkdir -p "$1" && cd "$1"; }        # mcd:          Makes new Dir and ju
 trash () { command mv "$@" ~/.Trash ; }     # trash:        Moves a file to the MacOS trash
 ql () { qlmanage -p "$*" >& /dev/null; }    # ql:           Opens any file in MacOS Quicklook Preview
 alias DT='tee ~/Desktop/terminalOut.txt'    # DT:           Pipe content to file on MacOS Desktop
-
-alias bfg='java -jar ~/Dev/bfg-1.13.0.jar'
 
 #   lr:  Full Recursive Directory Listing
 #   ------------------------------------------
@@ -317,12 +308,3 @@ httpDebug () { /usr/bin/curl $@ -o /dev/null -w "dns: %{time_namelookup} connect
 #   ---------------------------------------
 #   10.  APPLICATIONS
 #   ---------------------------------------
-
-alias jmeter='~/Dev/apps/apache-jmeter-4.0/bin/jmeter.sh &'
-
-
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '~/Dev/apps/google-cloud-sdk/path.bash.inc' ]; then . '~/Dev/apps/google-cloud-sdk/path.bash.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '~/Dev/apps/google-cloud-sdk/completion.bash.inc' ]; then . '~/Dev/apps/google-cloud-sdk/completion.bash.inc'; fi
